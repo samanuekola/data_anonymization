@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Encryption (Shuffling)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Patient Data Encryption (Shuffling)</h1>
+
+    <!-- Input form for patient data -->
+    <div>
+        <h2>Enter Patient Data</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br><br>
+
+        <button id="encryptButton">Shuffle Data</button>
+    </div>
+
+    <div id="encryptionResult" style="display:none;">
+        <h2>Shuffled Data</h2>
+        <pre id="encryptedData"></pre>
+
+        <h3>Original Data</h3>
+        <pre id="originalData"></pre>
+
+        <button id="decryptButton">Show Original Data</button>
+    </div>
+
+    <div id="decryptionResult" style="display:none;">
+        <h2>Original Data (Decrypted)</h2>
+        <pre id="decryptedData"></pre>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
